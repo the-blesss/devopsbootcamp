@@ -20,3 +20,9 @@ If using your own free Azure Subscription, your account will be both a Global Ad
 If using an existing subscription, confirm you are a Global Admin in Azure Active Directory, and confirm you are an Owner of the subscription.
 - Azure Active Directory Global Administrator: https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-assign-admin-roles
 - Subscription Owner, also called Access Control or IAM, or Role Based Access Control (RBAC): https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal
+
+## How do I fix or restart Azure Cloud Shell if I have an error?
+
+-First, try doing a reset by selecting the restart icon on the cloud shell toolbar.
+-Second, if you received an error about your cloud storage account, you may need to close cloud shell, delete your cloud shell storage account, which will be stored in a resource group similar to "cloud-shell-storage-eastus", but with your local region in the name. The name of the storage account if previously created, will start with "cs". If you are located in Canada, there are currenly no regions supported for cloud shell storage. When starting cloud shell the next time you will be prompted to create a cloud shell storage account, or you can use the advanced settings and select an existing storage account in a supported region. 
+--https://docs.microsoft.com/en-us/azure/cloud-shell/persisting-shell-storage#supported-storage-regions
